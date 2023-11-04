@@ -1,8 +1,10 @@
-package com.karpovich.weather_test_20;
+package com.karpovich.weather_test_20.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.karpovich.weather_test_20.R;
 
 public class MainActivity extends AppCompatActivity {
 
