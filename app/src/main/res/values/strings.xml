@@ -6,4 +6,6 @@
     <string name="temp">Temp</string>
     <string name="humidity">Humidity</string>
     <string name="today">Today:</string>
+    <string name="favorites">FAVORITES</string>
+    <string name="current_place">Current place</string>
 </resources>

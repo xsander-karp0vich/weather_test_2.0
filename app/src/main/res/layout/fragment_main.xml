@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.MainFragment"
     android:padding="10dp"
+    android:id="@+id/scrollViewMainFragment"
     android:background="@drawable/sunny_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +16,7 @@
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/group"
-            android:visibility="invisible"
+            android:visibility="visible"
             tools:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,6 +36,23 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Today, 21 Jun" />
 
+        <EditText
+            android:id="@+id/currentCityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:drawableEnd="@drawable/search_icon_weather_test_svg25x25"
+            android:fontFamily="@font/degular"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/total_white"
+            android:textColorHint="@color/total_white"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentDateTextView"
+            tools:text="ALANYA" />
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
@@ -42,7 +60,7 @@
             app:layout_constraintDimensionRatio="5:4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/currentDateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/currentCityEditText"
             tools:src="@drawable/sunny_icon" />
 
         <TextView
