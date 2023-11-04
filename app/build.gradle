@@ -37,15 +37,18 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
     //rxJava
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
-
     //room
     def room_version = "2.6.0"
     ksp "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-rxjava3:$room_version"
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+
 }
