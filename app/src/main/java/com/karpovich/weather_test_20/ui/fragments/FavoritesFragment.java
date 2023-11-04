@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import com.karpovich.weather_test_20.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FavoritesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FavoritesFragment extends Fragment {
 
 
