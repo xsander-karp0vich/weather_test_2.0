@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Weather_test_20"
+        android:theme="@style/Theme.Weather.Splash"
         tools:targetApi="31">
         <activity
             android:name=".ui.activity.MainActivity"
