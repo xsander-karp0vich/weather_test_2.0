@@ -9,18 +9,46 @@
     android:id="@+id/scrollViewMainFragment"
     android:background="@drawable/sunny_background">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/group"
-            android:visibility="visible"
             tools:visibility="visible"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="constraint"/>
+            app:constraint_referenced_ids="currentDateTextView,
+            favoritesImageButton,
+            weatherImageView, weatherTypeTextView,
+            wind,temp,humidity,windTextView,tempTextView,
+            humidityTextView,line1,line2,todayTextView,"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/total_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/errorMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/degular"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Check your internet connection" />
 
 
         <TextView
@@ -54,11 +82,12 @@
             tools:text="ALANYA" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/weatherImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="5:4"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/currentCityEditText"
             tools:src="@drawable/sunny_icon" />
@@ -74,15 +103,15 @@
             android:textSize="42sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/weatherImageView"
             tools:text="It's sunny!" />
 
         <ImageButton
             android:id="@+id/favoritesImageButton"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:src="@drawable/bars"
             android:background="@color/transparent"
+            android:src="@drawable/bars"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -192,7 +221,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/weatherRecycleView"
-            android:visibility="gone"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
